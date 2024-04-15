@@ -4,6 +4,7 @@ import 'package:myapp/screens/cart.dart';
 import 'package:myapp/screens/explore.dart';
 import 'package:myapp/screens/favourite.dart';
 import 'package:myapp/screens/shop.dart';
+import 'package:myapp/sub_screens/product_details.dart';
 
 void main() => runApp(const MyApp());
 

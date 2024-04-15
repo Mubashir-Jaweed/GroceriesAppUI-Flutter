@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/components/grocery_tabs.dart';
+import 'package:myapp/sub_screens/product_details.dart';
 
 class shop extends StatefulWidget {
   const shop({super.key});
@@ -189,6 +191,7 @@ class _shopState extends State<shop> {
                 SizedBox(
                   height: 15,
                 ),
+
                 Container(
                   width: MediaQuery.of(context).size.width,
                   child: const Row(
@@ -227,77 +230,90 @@ class _shopState extends State<shop> {
                     child: Row(
                       children: data['exclusive_Offer'].map<Widget>(
                         (item) {
-                          return Container(
-                            height: 200,
-                            width: 150,
-                            margin: EdgeInsets.only(
-                              right: 12,
-                            ),
-                            padding: EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 1.5,
-                                color: Colors.grey[300]!,
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetails(
+                                            item: item,
+                                          )));
+                            },
+                            child: Container(
+                              height: 200,
+                              width: 150,
+                              margin: const EdgeInsets.only(
+                                right: 12,
                               ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                      child: Image.asset(
-                                        item['img'],
-                                        height: 80,
-                                        width: 80,
-                                      ),
-                                    ),
-                                    Text(
-                                      item['name'] ?? '',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      item['qty'] ?? '',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                  ],
+                              padding: EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1.5,
+                                  color: Colors.grey[300]!,
                                 ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '\$${item['price']}',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Color(0xFF53B175),
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: IconButton(
-                                        icon: Icon(Icons.add),
-                                        iconSize: 30,
-                                        color: Colors.white,
-                                        onPressed: () {},
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                        child: Image.asset(
+                                          item['img'],
+                                          height: 80,
+                                          width: 80,
+                                        ),
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
+                                      Text(
+                                        item['name'] ?? '',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Text(
+                                        item['qty'] ?? '',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '\$${item['price']}',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: Color(0xFF53B175),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: IconButton(
+                                          icon: Icon(Icons.add),
+                                          iconSize: 30,
+                                          color: Colors.white,
+                                          onPressed: () {},
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           );
                         },
@@ -348,77 +364,90 @@ class _shopState extends State<shop> {
                     child: Row(
                       children: data['best_selling'].map<Widget>(
                         (item) {
-                          return Container(
-                            height: 200,
-                            width: 150,
-                            margin: EdgeInsets.only(
-                              right: 12,
-                            ),
-                            padding: EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 1.5,
-                                color: Colors.grey[300]!,
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetails(
+                                            item: item,
+                                          )));
+                            },
+                            child: Container(
+                              height: 200,
+                              width: 150,
+                              margin: EdgeInsets.only(
+                                right: 12,
                               ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                      child: Image.asset(
-                                        item['img'],
-                                        height: 80,
-                                        width: 80,
-                                      ),
-                                    ),
-                                    Text(
-                                      item['name'] ?? '',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      item['qty'] ?? '',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                  ],
+                              padding: EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1.5,
+                                  color: Colors.grey[300]!,
                                 ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '\$${item['price']}',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Color(0xFF53B175),
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: IconButton(
-                                        icon: Icon(Icons.add),
-                                        iconSize: 30,
-                                        color: Colors.white,
-                                        onPressed: () {},
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                        child: Image.asset(
+                                          item['img'],
+                                          height: 80,
+                                          width: 80,
+                                        ),
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
+                                      Text(
+                                        item['name'] ?? '',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Text(
+                                        item['qty'] ?? '',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '\$${item['price']}',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: Color(0xFF53B175),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: IconButton(
+                                          icon: Icon(Icons.add),
+                                          iconSize: 30,
+                                          color: Colors.white,
+                                          onPressed: () {},
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           );
                         },
@@ -458,14 +487,13 @@ class _shopState extends State<shop> {
                 SizedBox(
                   height: 15,
                 ),
-
-//
-
+                //..............  grocery tab Component
+                GroceryTabs(),
                 SizedBox(
                   height: 15,
                 ),
 
-                //  Groceries Map
+                //................  Groceries Map
 
                 Container(
                   height: 200,
@@ -475,77 +503,90 @@ class _shopState extends State<shop> {
                     child: Row(
                       children: data['groceries']['products'].map<Widget>(
                         (item) {
-                          return Container(
-                            height: 200,
-                            width: 150,
-                            margin: EdgeInsets.only(
-                              right: 12,
-                            ),
-                            padding: EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 1.5,
-                                color: Colors.grey[300]!,
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetails(
+                                            item: item,
+                                          )));
+                            },
+                            child: Container(
+                              height: 200,
+                              width: 150,
+                              margin: EdgeInsets.only(
+                                right: 12,
                               ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                      child: Image.asset(
-                                        item['img'],
-                                        height: 80,
-                                        width: 80,
-                                      ),
-                                    ),
-                                    Text(
-                                      item['name'] ?? '',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      item['qty'] ?? '',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                  ],
+                              padding: EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1.5,
+                                  color: Colors.grey[300]!,
                                 ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      '\$${item['price']}',
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Colors.black),
-                                    ),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          color: Color(0xFF53B175),
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: IconButton(
-                                        icon: Icon(Icons.add),
-                                        iconSize: 30,
-                                        color: Colors.white,
-                                        onPressed: () {},
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                        child: Image.asset(
+                                          item['img'],
+                                          height: 80,
+                                          width: 80,
+                                        ),
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
+                                      Text(
+                                        item['name'] ?? '',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Text(
+                                        item['qty'] ?? '',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '\$${item['price']}',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.black),
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                            color: Color(0xFF53B175),
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: IconButton(
+                                          icon: Icon(Icons.add),
+                                          iconSize: 30,
+                                          color: Colors.white,
+                                          onPressed: () {},
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           );
                         },
