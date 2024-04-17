@@ -55,7 +55,6 @@ class _cartState extends State<cart> {
 
               // ...........................
 
-              // ...........................
 
               Expanded(
                 child: Container(

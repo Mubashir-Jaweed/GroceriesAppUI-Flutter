@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/sub_screens/product_details.dart';
 
 class FavouriteCard extends StatefulWidget {
   const FavouriteCard({super.key, required this.favouriteItem});
@@ -68,7 +69,16 @@ class _FavouriteCardState extends State<FavouriteCard> {
                       icon: const Icon(Icons.keyboard_arrow_right),
                       color: Colors.black,
                       iconSize: 27,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductDetails(
+                              item: widget.favouriteItem,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
