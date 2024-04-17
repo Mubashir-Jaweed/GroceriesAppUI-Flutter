@@ -60,7 +60,7 @@ class _exploreState extends State<explore> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 const Text(
                   "Find Products",

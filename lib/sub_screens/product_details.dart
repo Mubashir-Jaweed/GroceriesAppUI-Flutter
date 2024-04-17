@@ -163,7 +163,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                             color: Colors.grey,
                             width: 1,
                           ),
-                        )),
+                        ),
+                        ),
                         width: MediaQuery.of(context).size.width,
                         child: Column(
                           children: [
