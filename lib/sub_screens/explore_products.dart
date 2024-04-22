@@ -4,8 +4,7 @@ import 'package:myapp/components/primary_card.dart';
 import 'package:myapp/sub_screens/filter.dart';
 
 class ExploreProducts extends StatefulWidget {
-  const ExploreProducts({super.key, required this.products});
-
+  ExploreProducts({super.key, required this.products});
   final dynamic products;
 
   @override
@@ -13,6 +12,14 @@ class ExploreProducts extends StatefulWidget {
 }
 
 class _ExploreProductsState extends State<ExploreProducts> {
+  // List<Map<String, dynamic>> filteredData = [];
+
+  // @override
+  // void initState() {
+  //   filteredData = widget.products;
+  //   super.initState();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +67,9 @@ class _ExploreProductsState extends State<ExploreProducts> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: TextFormField(
+                    // onChanged: (query) {
+
+                    // },
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Search Store",
@@ -94,3 +104,4 @@ class _ExploreProductsState extends State<ExploreProducts> {
         ));
   }
 }
+ 

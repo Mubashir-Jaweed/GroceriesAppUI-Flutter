@@ -14,66 +14,72 @@ class _shopState extends State<shop> {
   Map data = {
     "exclusive_Offer": [
       {
+        "id": 1,
         "img": "images/banana.jpg",
         "name": "Organic Bananas",
-        "price": "4.99",
+        "price": 2.99,
         "qty": "7pcs, Price",
         "nutritions": "100gr",
         "review": "5",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       },
       {
+        "id": 2,
         "img": "images/apple.png",
         "name": "Red Apple",
-        "price": "7.99",
+        "price": 7.99,
         "qty": "1kg, Price",
         "nutritions": "120gr",
         "review": "4",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       },
       {
+        "id": 3,
         "img": "images/mango.jpg",
         "name": "King Mango",
-        "price": "14.99",
+        "price": 14.99,
         "qty": "1kg, Price",
         "nutritions": "160gr",
         "review": "5",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       }
     ],
     "best_selling": [
       {
+        "id": 4,
         "img": "images/tomato.jpg",
         "name": "Tomatoes",
-        "price": "1.99",
+        "price": 1.99,
         "qty": "1kg, Price",
         "nutritions": "10gr",
         "review": "5",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       },
       {
+        "id": 5,
         "img": "images/ginger.jpg",
         "name": "Ginger",
-        "price": "79.99",
+        "price": 79.99,
         "qty": "1kg, Price",
         "nutritions": "20gr",
         "review": "3",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       },
       {
+        "id": 6,
         "img": "images/mango.jpg",
         "name": "King Mango",
-        "price": "14.99",
+        "price": 14.99,
         "qty": "1kg, Price",
         "nutritions": "160gr",
         "review": "5",
         "details":
-            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+            "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
       }
     ],
     "groceries": {
@@ -83,34 +89,37 @@ class _shopState extends State<shop> {
       ],
       "products": [
         {
+          "id": 7,
           "img": "images/beef.jpg",
           "name": "Beef Bones",
-          "price": "9.99",
+          "price": 9.99,
           "qty": "1kg, Price",
           "nutritions": "10gr",
           "review": "5",
           "details":
-              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
         },
         {
+          "id": 8,
           "img": "images/chicken.jpg",
           "name": "Broiler Chicken",
-          "price": "9.99",
+          "price": 9.99,
           "qty": "1kg, Price",
           "nutritions": "20gr",
           "review": "3",
           "details":
-              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
         },
         {
+          "id": 9,
           "img": "images/mango.jpg",
           "name": "King Mango",
-          "price": "14.99",
+          "price": 14.99,
           "qty": "1kg, Price",
           "nutritions": "160gr",
           "review": "5",
           "details":
-              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet."
+              "Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healthful and varied diet."
         }
       ]
     }

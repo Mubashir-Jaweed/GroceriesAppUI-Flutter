@@ -9,14 +9,14 @@ class explore extends StatefulWidget {
 }
 
 class _exploreState extends State<explore> {
-  List data = [
+  List<Map<String, dynamic>> data = [
     {
       "color": "0xFFFFE8D6",
       "border_color": "0xFFFFA927",
       "name": "Fresh Fruits & Vegetable",
       "img": "images/1.png",
       "products": [
-         {
+        {
           "img": "images/banana.jpg",
           "name": "Organic Bananas",
           "price": "4.99",
@@ -240,6 +240,15 @@ class _exploreState extends State<explore> {
     },
   ];
 
+  List<Map<String, dynamic>> filteredData = [];
+
+  @override
+  void initState() {
+    filteredData = data;
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -269,6 +278,15 @@ class _exploreState extends State<explore> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: TextFormField(
+                  onChanged: (query) {
+                    setState(() {
+                      filteredData = data
+                          .where((item) => item['name']
+                              .toLowerCase()
+                              .contains(query.toLowerCase()))
+                          .toList();
+                    });
+                  },
                   decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Search Store",
@@ -291,9 +309,9 @@ class _exploreState extends State<explore> {
                   crossAxisSpacing: 10,
                   childAspectRatio: 0.95,
                 ),
-                itemCount: data.length,
+                itemCount: filteredData.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return ExploreCard(data: data[index]);
+                  return ExploreCard(data: filteredData[index]);
                 },
               )),
             ],

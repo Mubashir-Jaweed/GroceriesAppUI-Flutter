@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/data/cart_data.dart';
 import 'package:myapp/sub_screens/product_details.dart';
 
 class PrimartyCard extends StatefulWidget {
@@ -88,7 +89,11 @@ class _PrimartyCardState extends State<PrimartyCard> {
                     icon: Icon(Icons.add),
                     iconSize: 30,
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Map<String, dynamic> itemToAdd = widget.data;
+                      itemToAdd['count'] = 1;
+                      Cart.add(itemToAdd);
+                    },
                   ),
                 )
               ],

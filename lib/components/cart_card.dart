@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/data/cart_data.dart';
 
 class CartCard extends StatefulWidget {
   const CartCard({super.key, required this.cartItem});
@@ -124,7 +125,14 @@ class _CartCardState extends State<CartCard> {
                 icon: const Icon(Icons.close),
                 color: Colors.grey[600],
                 iconSize: 20,
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    Cart.removeWhere(
+                        (element) => element['id'] == widget.cartItem['id']);
+
+                        
+                  });
+                },
               ),
               const SizedBox(
                 height: 20,
